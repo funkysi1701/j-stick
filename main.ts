@@ -8,5 +8,4 @@ basic.forever(function () {
     Screen_X = Joystick_X / 250
     Screen_Y = Joystick_Y / 250
     basic.clearScreen()
-    led.plot(Screen_X, Screen_Y)
 })
