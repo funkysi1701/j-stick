@@ -10,7 +10,7 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/funkysi1701/j-stick** and import
 
-## Edit this project ![Build status badge](https://github.com/funkysi1701/j-stick/workflows/MakeCode/badge.svg)
+## Edit this project ![Build status badge](https://github.com/funkysi1701/j-stick/actions/workflows/pages/pages-build-deployment/badge.svg)
 
 To edit this repository in MakeCode.
 
