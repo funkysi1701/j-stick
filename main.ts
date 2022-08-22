@@ -1,12 +1,26 @@
 let Joystick_X = 0
 let Joystick_Y = 0
-let Screen_X = 0
 let Screen_Y = 0
+let Screen_X = 0
 basic.forever(function () {
     Joystick_X = pins.analogReadPin(AnalogPin.P1)
     Joystick_Y = pins.analogReadPin(AnalogPin.P0)
-    Screen_X = Joystick_X / 250
     Screen_Y = Joystick_Y / 250
+    if (Joystick_X < 200) {
+        Screen_X = 4
+    } else if (Joystick_X < 400) {
+        Screen_X = 3
+    } else if (Joystick_X < 600) {
+        Screen_X = 2
+    } else if (Joystick_X < 800) {
+        Screen_X = 1
+    } else {
+        Screen_X = 0
+    }
     basic.clearScreen()
+    serial.writeString("X=" + Joystick_X + ", " + "Y=" + Joystick_Y)
+    serial.writeLine("")
+    serial.writeLine("")
     led.plot(Screen_X, Screen_Y)
+    basic.pause(100)
 })
